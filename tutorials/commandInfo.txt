@@ -1,0 +1,10 @@
+1) Safe = False
+    The safe boolean parameter defaults to True.
+    If it's set to False, any object can be passed for serialization (otherwise only dict instances are allowed).
+
+2) __icontains
+    Case-insensitive containment test.
+
+3) many=True
+    it tell that queryset contains mutiple items (a list of items) so drf needs to serialize each item with serializer class (and serializer.data will be a list)
+    if you don't set this argument it means queryset is a single instance and serializer.data will be a single object)
